@@ -17,6 +17,10 @@ export class TrainingService {
     return this.availableExercises.slice();
   }
 
+  getCompletedOrCancelledExercises() {
+    return this.exercises.slice();
+  }
+
   startExercise(selectedId: string) {
     this.runningExercise = this.availableExercises.filter(exercise => exercise.id === selectedId)[0];
     this.exerciseChanged.next({ ...this.runningExercise });

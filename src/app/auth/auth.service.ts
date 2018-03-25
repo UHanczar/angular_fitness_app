@@ -8,7 +8,10 @@ import { AuthData } from './auth-data.model';
 @Injectable()
 export class AuthService {
   authChange = new Subject<boolean>();
-  private user: User;
+  private user: User = {
+    email: 'admin@gmail.com',
+    userId: '349348394834',
+  };
 
   constructor(private router: Router) {}
 
